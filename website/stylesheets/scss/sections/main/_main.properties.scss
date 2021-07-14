@@ -1,0 +1,41 @@
+// Main Styles =+=+=+=+=+=+=+=+=+=+=//
+
+// Imports -----------------------//
+@import "../../global/global.properties";
+
+// Variables -----------------------//
+$colour-header-article: #333333;
+$colour-subtitle: #999999;
+$colour-category: #e3b002;
+$colour-paragraph-article: #555555;
+
+// Mixins -----------------------//
+
+@mixin font-header {
+    font-family: $link-font-name;
+    src: $link-font-src;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+@mixin font-header-articles {
+    font-family: $link-font-name;
+    src: $link-font-src;
+    color: $colour-header-article;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+@mixin font-subtitle($colour) {
+    font-family: $font-primary-name;
+    src: $font-primary-src;
+    color: $colour;
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+@mixin article-paragraph {
+    color: $colour-paragraph-article;
+    font-size: 16px;
+    // font-weight: 100;
+}

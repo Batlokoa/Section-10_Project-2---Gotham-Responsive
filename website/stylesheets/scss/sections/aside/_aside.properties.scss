@@ -1,0 +1,18 @@
+// Aside Styles =+=+=+=+=+=+=+=+=+=+=//
+
+// Imports -----------------------//
+@import "../../global/global.properties";
+
+// Variables -----------------------//
+
+$font-awesome-name: "Font Awesome Reg";
+$font-awesome-src: url(/website/fonts/fontAwesome/webfonts/fa-regular-400.woff) format("woff"),
+    url(/website/fonts/fontAwesome/webfonts/fa-regular-400.ttf) format("truetype");
+
+$logo-font-name: "Font Awesome Logos";
+$logo-font-src: url(/website/fonts/fontAwesome/webfonts/fa-brands-400.woff) format("woff"),
+    url(/website/fonts/fontAwesome/webfonts/fa-brands-400.ttf) format("truetype");
+
+@mixin border-properties($border-width: 1px) {
+    border: $border-width solid $colour-subtitle;
+}

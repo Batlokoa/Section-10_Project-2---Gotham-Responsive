@@ -1,0 +1,36 @@
+// Global Styles =+=+=+=+=+=+=+=+=+=+=//
+
+// Variables -----------------------//
+
+$font-primary-name: Roboto;
+$font-primary-src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"),
+    url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+
+$font-secondary-name: "Proxima-Light";
+$font-secondary-src: url(/website/fonts/Proxima-Nova/ProximaNova-Light.woff) format("woff"),
+    url(/website/fonts/Proxima-Nova/ProximaNova-Light.otf) format("opentype");
+
+$link-font-name: "Proxima-Reg";
+$link-font-src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"),
+    url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
+
+$colour-primary: #f7c61d;
+$colour-secondary: #fff;
+
+// Mixins -----------------------//
+
+@mixin import-font($font-family, $font-src) {
+    font-family: $font-family;
+    src: $font-src;
+}
+
+@mixin link-format($padding) {
+    font-family: $link-font-name;
+    src: $link-font-src;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: $padding;
+    /// note: so that the padding doesn't add to the orignal height of the header, that the logo is within.
+    box-sizing: border-box;
+}

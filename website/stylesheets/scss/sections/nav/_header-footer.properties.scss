@@ -1,0 +1,32 @@
+// Header & Footer Styles =+=+=+=+=+=+=+=+=+=+=//
+
+// Imports -----------------------//
+@import "../../global/global.properties";
+
+// Variables -----------------------//
+
+$social-font-name: "Font Awesome";
+$social-font-src: url(/website/fonts/fontAwesome/webfonts/fa-brands-400.woff) format("woff"),
+    url(/website/fonts/fontAwesome/webfonts/fa-brands-400.ttf) format("truetype");
+
+$copy-font-name: "Proxima-Light";
+$copy-font-colour: #a78613;
+
+// Mixins -----------------------//
+
+@mixin nav-properties() {
+    height: 67px;
+    width: 100%;
+    background-color: $colour-primary;
+}
+
+@mixin nav-wrapper-properties() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin nav-ul-properties() {
+    display: flex;
+    justify-content: space-between;
+}

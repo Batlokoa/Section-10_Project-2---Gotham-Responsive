@@ -1,0 +1,369 @@
+// Master StyleSheet =+=+=+=+=+=+=+=+=+=+=//
+
+// Imports -----------------------//
+@import "./sections/nav/fontAwesome/fontawesome.scss";
+@import "./sections/nav/fontAwesome/regular.scss";
+@import "./global/global.properties";
+@import "./sections/nav/header-footer.properties";
+@import "./sections/main/main.properties";
+@import "./sections/aside/aside.properties";
+
+/* Global Styles =====================*/
+
+@font-face {
+    @include import-font($font-primary-name, $font-primary-src);
+}
+
+@font-face {
+    @include import-font($font-secondary-name, $font-secondary-src);
+    font-weight: lighter;
+}
+
+@font-face {
+    @include import-font($link-font-name, $link-font-src);
+}
+
+@font-face {
+    @include import-font($social-font-name, $social-font-src);
+}
+
+@font-face {
+    @include import-font($font-awesome-name, $font-awesome-src);
+}
+
+@font-face {
+    @include import-font($logo-font-name, $logo-font-src);
+}
+
+body {
+    font-family: $font-primary-name;
+    font-size: 16px;
+}
+
+wrapper {
+    display: flex;
+}
+
+.wrapper {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+// todo: look into link seperation spacing of Nav
+nav ul {
+    @include nav-ul-properties();
+
+    a {
+        @include link-format(0 35px);
+    }
+}
+
+/* Header Styles =====================*/
+
+header {
+    @include nav-properties();
+
+    .wrapper {
+        @include nav-wrapper-properties();
+    }
+}
+
+/* Main Styles =====================*/
+main {
+    width: 77%;
+    display: flex;
+
+    h1 {
+        @include font-header();
+        margin: 16px 0 15px;
+    }
+
+    article {
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: space-around;
+
+        figure {
+            width: 30%;
+            img {
+                // width: 100%;
+                border-radius: 3px;
+            }
+        }
+
+        .article-content {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 25px;
+            h1 {
+                @include font-header-articles();
+            }
+
+            .subtitle {
+                margin: 10px 0 10px 0;
+                .date,
+                .author {
+                    @include font-subtitle($colour-subtitle);
+                }
+
+                .category {
+                    @include font-subtitle($colour-category);
+                }
+            }
+
+            p {
+                @include article-paragraph();
+
+                &::after {
+                    display: inline;
+                    content: ">";
+                    font-size: 16px;
+                    color: $colour-category;
+                }
+            }
+
+            .additional {
+                margin-top: 8px;
+                .veiws {
+                    @include font-subtitle($colour-subtitle);
+
+                    &::before {
+                        display: inline-block;
+                        content: "\1F441";
+                        font-size: 18px;
+                        margin-right: 3px;
+                    }
+                }
+
+                .comments {
+                    @include font-subtitle($colour-category);
+
+                    &::before {
+                        display: inline-block;
+                        content: "\1F4AC";
+                        // content: "\1F5E9";
+                        // font-size: 16px;
+                        // color: $colour-subtitle;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+
+        // span::after {
+        //     display: inline-block;
+        //     content: " ";
+        // }
+
+        span::after {
+            display: inline-block;
+            content: " | ";
+            color: $colour-subtitle;
+            font-size: 13px;
+            margin-left: 3px;
+        }
+
+        span:last-child::after {
+            display: none;
+        }
+    }
+
+    button {
+        width: 170px;
+        height: 42px;
+        background: transparent;
+        font-size: 12px;
+        text-decoration: uppercase;
+        border: 2px solid $colour-primary;
+        border-radius: 5px;
+        // Required for "margin: 0 auto;" to move button to the middle of the parent container/tag
+        display: block;
+        margin: 0 auto 20px;
+    }
+}
+
+/* Aside Styles =====================*/
+aside {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    padding: 78px 65px 0 65px;
+    // border: 1px solid $colour-header-article;
+    // box-sizing: border-box;
+
+    .search {
+        width: 100%;
+        position: relative;
+
+        label {
+            position: absolute;
+            padding: 10px 5px;
+            z-index: 3;
+        }
+        input {
+            width: 70%;
+            border-radius: 10px;
+            @include border-properties(2px);
+            outline: none;
+            padding: 8px 30px 8px 30px;
+            box-sizing: border-box;
+        }
+    }
+
+    calendar-widget,
+    calendar-top {
+        display: flex;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        calendar-prev,
+        calendar-next {
+            font-family: $logo-font-name;
+            color: $colour-paragraph-article;
+        }
+
+        table {
+            width: calc(100% + 4px);
+            margin-left: -2px;
+            @include border-properties();
+            border-radius: 0 0 10px 10px;
+
+            th,
+            td {
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            th {
+                height: 23px;
+                background-color: #e7e7e7;
+                color: rgb(122, 122, 122);
+            }
+
+            .other-month {
+                color: $colour-subtitle;
+            }
+
+            tr {
+                td {
+                    height: 33px;
+                    color: $colour-header-article;
+                    @include border-properties();
+                }
+
+                &:last-of-type {
+                    td:first-of-type {
+                        border-radius: 0 0 0 10px;
+                    }
+
+                    td:last-of-type {
+                        border-radius: 0 0 10px 0;
+                    }
+                }
+            }
+
+            #current-day {
+                background-color: $colour-category;
+                color: $colour-secondary;
+            }
+        }
+    }
+
+    calendar-widget {
+        @include border-properties();
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc(80% + 4px);
+        margin-top: 38px;
+    }
+
+    calendar-top {
+        width: 100%;
+        height: 38px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .popular-news {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-around;
+        margin-top: 38px;
+
+        h1 {
+            display: flex;
+            font-family: $link-font-name;
+            font-size: 22px;
+            font-weight: bold;
+            white-space: nowrap;
+            align-items: center;
+
+            &::after {
+                display: block;
+                content: ".";
+                font-size: 0;
+                width: 50%;
+                height: 1px;
+                border-top: 2px solid $colour-subtitle;
+                margin-left: 10px;
+            }
+        }
+
+        article {
+            margin-top: 18px;
+            .news-date {
+                @include font-subtitle($colour-subtitle);
+            }
+            h2 {
+                font-size: 16px;
+                line-height: 1.2;
+                margin-top: 6px;
+            }
+        }
+    }
+}
+
+/* Footer Styles =====================*/
+
+footer {
+    @include nav-properties();
+
+    .wrapper {
+        @include nav-wrapper-properties();
+
+        .copy {
+            font-family: $copy-font-name;
+            font-size: 13px;
+            color: $copy-font-colour;
+        }
+
+        .social {
+            justify-content: flex-end;
+            ul {
+                @include nav-ul-properties();
+
+                a {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: $colour-secondary;
+                    font-family: $social-font-name;
+                    color: $colour-primary;
+                    /// note: so that the padding doesn't add to the orignal height of the header, that the logo is within.
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    margin: 0 12px;
+                }
+            }
+        }
+    }
+}
