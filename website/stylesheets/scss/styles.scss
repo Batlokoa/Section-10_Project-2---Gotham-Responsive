@@ -7,8 +7,11 @@
 @import "./sections/nav/header-footer.properties";
 @import "./sections/main/main.properties";
 @import "./sections/aside/aside.properties";
+@import "./responsive/media-queries";
 
-/* Global Styles =====================*/
+/* ================================== */
+/* Global Styles ==================== */
+/* ================================== */
 
 @font-face {
     @include import-font($font-primary-name, $font-primary-src);
@@ -40,7 +43,7 @@ body {
     font-size: 16px;
 }
 
-wrapper {
+.prime-wrapper {
     display: flex;
 }
 
@@ -59,7 +62,9 @@ nav ul {
     }
 }
 
-/* Header Styles =====================*/
+/* ================================== */
+/* Header Styles ==================== */
+/* ================================== */
 
 header {
     @include nav-properties();
@@ -69,7 +74,10 @@ header {
     }
 }
 
-/* Main Styles =====================*/
+/* ================================= */
+/* Main Styles ===================== */
+/* ================================= */
+
 main {
     width: 77%;
     display: flex;
@@ -85,15 +93,16 @@ main {
         justify-content: space-around;
 
         figure {
-            width: 30%;
+            width: 25%;
             img {
-                // width: 100%;
+                width: 15em;
+                margin: 1em 3em 0 0;
                 border-radius: 3px;
             }
         }
 
         .article-content {
-            width: 70%;
+            width: 65%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -185,7 +194,10 @@ main {
     }
 }
 
-/* Aside Styles =====================*/
+/* ================================== */
+/* Aside Styles ===================== */
+/* ================================== */
+
 aside {
     width: 23%;
     display: flex;
@@ -327,7 +339,9 @@ aside {
     }
 }
 
-/* Footer Styles =====================*/
+/* ================================== */
+/* Footer Styles ==================== */
+/* ================================== */
 
 footer {
     @include nav-properties();

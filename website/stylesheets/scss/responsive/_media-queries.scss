@@ -1,0 +1,52 @@
+/* ================================== */
+/* Media Queries ==================== */
+/* ================================== */
+
+// Tablet Dimentions =+=+=+=+=+=+=+=+=+=+=//
+
+@media (max-width: 75em) {
+    .prime-wrapper {
+        flex-direction: column;
+        width: 100%;
+        // box-sizing: border-box;
+
+        main,
+        aside {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .articles-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            // width: 100%;
+
+            article {
+                flex-direction: column;
+
+                width: calc(45% - 1em);
+                margin: 0 0 1em 1em;
+                padding: 0;
+
+                figure {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+                .article-content {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// Mobile Dimentions =+=+=+=+=+=+=+=+=+=+=//
+
+@media (max-width: 36.125em) {
+}

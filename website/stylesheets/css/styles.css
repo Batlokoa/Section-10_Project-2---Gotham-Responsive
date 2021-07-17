@@ -4600,7 +4600,52 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 400; }
 
-/* Global Styles =====================*/
+/* ================================== */
+/* Media Queries ==================== */
+/* ================================== */
+@media (max-width: 75em) {
+  .prime-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%; }
+    .prime-wrapper main,
+    .prime-wrapper aside {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%; }
+    .prime-wrapper .articles-section {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .prime-wrapper .articles-section article {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: calc(45% - 1em);
+        margin: 0 0 1em 1em;
+        padding: 0; }
+        .prime-wrapper .articles-section article figure {
+          width: 100%; }
+          .prime-wrapper .articles-section article figure img {
+            width: 100%;
+            margin: 0; }
+        .prime-wrapper .articles-section article .article-content {
+          padding: 0;
+          margin: 0; } }
+
+/* ================================== */
+/* Global Styles ==================== */
+/* ================================== */
 @font-face {
   font-family: Roboto;
   src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"), url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype"); }
@@ -4630,7 +4675,7 @@ body {
   font-family: Roboto;
   font-size: 16px; }
 
-wrapper {
+.prime-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -4657,7 +4702,9 @@ nav ul {
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
 
-/* Header Styles =====================*/
+/* ================================== */
+/* Header Styles ==================== */
+/* ================================== */
 header {
   height: 67px;
   width: 100%;
@@ -4672,7 +4719,9 @@ header {
         -ms-flex-align: center;
             align-items: center; }
 
-/* Main Styles =====================*/
+/* ================================= */
+/* Main Styles ===================== */
+/* ================================= */
 main {
   width: 77%;
   display: -webkit-box;
@@ -4692,11 +4741,13 @@ main {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
     main article figure {
-      width: 30%; }
+      width: 25%; }
       main article figure img {
+        width: 15em;
+        margin: 1em 3em 0 0;
         border-radius: 3px; }
     main article .article-content {
-      width: 70%;
+      width: 65%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -4780,7 +4831,9 @@ main {
     display: block;
     margin: 0 auto 20px; }
 
-/* Aside Styles =====================*/
+/* ================================== */
+/* Aside Styles ===================== */
+/* ================================== */
 aside {
   width: 23%;
   display: -webkit-box;
@@ -4915,7 +4968,9 @@ aside {
         line-height: 1.2;
         margin-top: 6px; }
 
-/* Footer Styles =====================*/
+/* ================================== */
+/* Footer Styles ==================== */
+/* ================================== */
 footer {
   height: 67px;
   width: 100%;
