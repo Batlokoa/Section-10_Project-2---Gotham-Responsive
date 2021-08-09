@@ -12,16 +12,19 @@
 
         main,
         aside {
-            flex-direction: column;
             width: 100%;
+        }
+
+        main {
+            flex-direction: column;
         }
 
         .articles-section {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
 
-            // width: 100%;
+            //This ensures that fewer articles show next to each other and are further spaced-out
+            flex-wrap: wrap;
 
             article {
                 flex-direction: column;
@@ -40,6 +43,46 @@
                 .article-content {
                     padding: 0;
                     margin: 0;
+                }
+            }
+        }
+
+        aside {
+            padding: 3em 1em 2em 1em;
+            flex-direction: row;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            align-items: flex-start;
+
+            .search {
+                input {
+                    width: 48.5%;
+                }
+            }
+
+            .news-segment {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                // align-items: flex-start;
+
+                calendar-widget {
+                    width: calc(50% - 1em);
+                    height: 15em;
+                    // margin: 3em 1em 0 1em;
+
+                    box-sizing: border-box;
+
+                    justify-content: center;
+                }
+
+                calendar-top {
+                    height: 2.4em;
+                }
+
+                .popular-news {
+                    width: 40%;
                 }
             }
         }
