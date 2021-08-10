@@ -43,6 +43,7 @@
                 .article-content {
                     padding: 0;
                     margin: 0;
+                    width: 100%;
                 }
             }
         }
@@ -83,6 +84,39 @@
 
                 .popular-news {
                     width: 40%;
+                }
+            }
+        }
+    }
+
+    footer {
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+
+            .copy{
+                width: 100%;
+                // *note: The "order" property positions elements according to the value of their order. The default value is 0, and any value higher than it is placed further down.
+                order: 1;
+            }
+            .nav {
+                width: 60%;
+
+                .footer-nav {
+                    a {
+                        padding: 0;
+                    }
+                }
+            } 
+            
+            .social {
+                width: 30%;
+
+                ul{
+                    li{
+                        width: 33%;
+                    }
                 }
             }
         }
