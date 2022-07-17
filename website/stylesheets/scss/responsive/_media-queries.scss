@@ -10,6 +10,17 @@
         width: 100%;
         // box-sizing: border-box;
 
+        header {
+            .nav-toggle {
+                display: block;
+            }
+
+            .header-nav-left,
+            .header-nav-right {
+                display: none;
+            }
+        }
+
         main,
         aside {
             width: 100%;
@@ -43,6 +54,8 @@
                 .article-content {
                     padding: 0;
                     margin: 0;
+
+                    width: 100%;
                 }
             }
         }
@@ -87,9 +100,89 @@
             }
         }
     }
+
+    footer {
+        height: 7em;
+
+        .wrapper {
+            flex-direction: column;
+
+            .copy {
+                order: 2;
+            }
+
+            .nav {
+                order: 0;
+                // justify-content: space-around;
+                nav {
+                    ul {
+                        justify-content: space-around;
+                        li {
+                            a {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social {
+                order: 1;
+                width: 40%;
+
+                ul {
+                    justify-content: space-around;
+                }
+            }
+        }
+
+        .copy,
+        .nav,
+        .social {
+            width: 100%;
+        }
+    }
 }
 
 // Mobile Dimentions =+=+=+=+=+=+=+=+=+=+=//
 
 @media (max-width: 36.125em) {
+    .prime-wrapper {
+        main {
+            .articles-section {
+                article {
+                    width: 100%;
+                    .article-content {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        aside {
+            justify-content: space-around;
+            .search {
+                width: 80%;
+                input {
+                    width: 100%;
+                }
+            }
+            .news-segment {
+                calendar-widget,
+                .popular-news {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    footer {
+        height: 7em;
+        flex-direction: column;
+
+        .social {
+            display: flex;
+            justify-content: start;
+        }
+    }
 }
