@@ -6,6 +6,8 @@
 
 @media (max-width: 75em) {
     header {
+        position: relative;
+
         .header-wrapper{
             @include nav-wrapper-properties(space-between);
 
@@ -21,6 +23,40 @@
             .header-nav-left,
             .header-nav-right {
                 display: none;
+
+                ul{
+                    flex-direction: column;
+                }
+            }
+        }
+
+        &.open{
+            $header-nav-margin: 1.5rem;
+
+            .header-nav-left, .header-nav-right{
+                display: block;
+                position: absolute;
+                top: 100%;
+                z-index: 2;
+
+                li{
+                    margin: ($header-nav-margin / 2) 0;
+                }
+            }
+
+            .header-nav-left {
+                left: $header-nav-margin;
+            }
+
+            .header-nav-right {
+                right: $header-nav-margin;
+            }
+
+            &::after{
+                content: '';
+                @include nav-properties(8em);
+                position: absolute;
+                top: 100%;
             }
         }
     }
@@ -110,8 +146,8 @@
     }
 
     footer {
-        height: 7em;
-        
+        height: 6.5em;
+
         .wrapper {
             flex-direction: column;
 
@@ -123,7 +159,7 @@
                 order: 0;
                 // justify-content: space-around;
                 .footer-nav {
-                    margin: 1em;
+                    // margin: 0.5em;
 
                     ul {
                         justify-content: space-around;
@@ -188,7 +224,7 @@
     }
 
     footer {
-        height: 7em;
+        height: 8em;
         flex-direction: column;
 
         .social {

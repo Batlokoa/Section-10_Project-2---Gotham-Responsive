@@ -8,7 +8,6 @@
 @import "./sections/nav/nav-burger.scss";
 @import "./sections/main/main.properties";
 @import "./sections/aside/aside.properties";
-@import "./responsive/media-queries";
 
 
 /* ================================== */
@@ -358,7 +357,6 @@ aside {
 
 footer {
     @include nav-properties();
-    // height: 7em;
 
     .footer-wrapper {
         @extend .wrapper;
@@ -383,7 +381,7 @@ footer {
                     background: $colour-secondary;
                     font-family: $social-font-name;
                     color: $colour-primary;
-                    /// note: so that the padding doesn't add to the orignal height of the header, that the logo is within.
+                    //* note: so that the padding doesn't add to the orignal height of the header, that the logo is within.
                     box-sizing: border-box;
                     font-size: 16px;
                     display: flex;
@@ -396,3 +394,7 @@ footer {
         }
     }
 }
+
+//* Media-Queries will only over-write global properties when loaded after them 
+// Media-Queries Import -----------------------//
+@import "./responsive/media-queries";
