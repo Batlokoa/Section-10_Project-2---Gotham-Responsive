@@ -5,14 +5,17 @@
 // Tablet Dimentions =+=+=+=+=+=+=+=+=+=+=//
 
 @media (max-width: 75em) {
-    .prime-wrapper {
-        flex-direction: column;
-        width: 100%;
-        // box-sizing: border-box;
+    header {
+        .header-wrapper{
+            @include nav-wrapper-properties(space-between);
 
-        header {
             .nav-toggle {
                 display: block;
+                order: 1;
+                
+                .toggle-line{
+                    display: block;
+                }
             }
 
             .header-nav-left,
@@ -20,6 +23,12 @@
                 display: none;
             }
         }
+    }
+
+    .prime-wrapper {
+        flex-direction: column;
+        width: 100%;
+        // box-sizing: border-box;
 
         main,
         aside {
@@ -113,7 +122,9 @@
             .nav {
                 order: 0;
                 // justify-content: space-around;
-                nav {
+                .footer-nav {
+                    margin: 1em;
+
                     ul {
                         justify-content: space-around;
                         li {
@@ -147,6 +158,7 @@
 
 @media (max-width: 36.125em) {
     .prime-wrapper {
+        
         main {
             .articles-section {
                 article {

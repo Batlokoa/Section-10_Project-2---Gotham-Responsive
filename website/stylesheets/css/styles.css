@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -18,7 +19,7 @@
 }
 
 .fa-lg {
-  font-size: 1.33333em;
+  font-size: 1.3333333333em;
   line-height: 0.75em;
   vertical-align: -0.0667em;
 }
@@ -114,7 +115,6 @@
 .fab.fa-pull-left {
   margin-right: 0.3em;
 }
-
 .fa.fa-pull-right,
 .fas.fa-pull-right,
 .far.fa-pull-right,
@@ -125,70 +125,58 @@
 
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
-  animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
   -webkit-animation: fa-spin 1s infinite steps(8);
-  animation: fa-spin 1s infinite steps(8);
+          animation: fa-spin 1s infinite steps(8);
 }
 
 @-webkit-keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-  -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-  -webkit-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
-.fa-flip-both,
-.fa-flip-horizontal.fa-flip-vertical {
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-  -webkit-transform: scale(-1, -1);
   transform: scale(-1, -1);
 }
 
@@ -198,7 +186,6 @@
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical,
 :root .fa-flip-both {
-  -webkit-filter: none;
   filter: none;
 }
 
@@ -6080,8 +6067,7 @@ readers do not read off random characters that represent icons */
   width: 1px;
 }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
+.sr-only-focusable:active, .sr-only-focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -6100,59 +6086,53 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
   font-display: block;
   src: url("../webfonts/fa-regular-400.eot");
-  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
-    url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"),
-    url("../webfonts/fa-regular-400.ttf") format("truetype"),
-    url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
-
 .far {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
 
 /* ================================== */
+/* Nav Burger Properties ============ */
+/* ================================== */
+/* ================================== */
 /* Media Queries ==================== */
 /* ================================== */
 @media (max-width: 75em) {
+  header .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .header-wrapper .nav-toggle {
+    display: block;
+    order: 1;
+  }
+  header .header-wrapper .nav-toggle .toggle-line {
+    display: block;
+  }
+  header .header-wrapper .header-nav-left,
+header .header-wrapper .header-nav-right {
+    display: none;
+  }
   .prime-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
   }
-  .prime-wrapper header .nav-toggle {
-    display: block;
-  }
-  .prime-wrapper header .header-nav-left,
-  .prime-wrapper header .header-nav-right {
-    display: none;
-  }
   .prime-wrapper main,
-  .prime-wrapper aside {
+.prime-wrapper aside {
     width: 100%;
   }
   .prime-wrapper main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   .prime-wrapper .articles-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .prime-wrapper .articles-section article {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: calc(45% - 1em);
     margin: 0 0 1em 1em;
@@ -6172,16 +6152,9 @@ readers do not read off random characters that represent icons */
   }
   .prime-wrapper aside {
     padding: 3em 1em 2em 1em;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
   }
   .prime-wrapper aside .search input {
@@ -6189,22 +6162,14 @@ readers do not read off random characters that represent icons */
   }
   .prime-wrapper aside .news-segment {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .prime-wrapper aside .news-segment calendar-widget {
     width: calc(50% - 1em);
     height: 15em;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .prime-wrapper aside .news-segment calendar-top {
@@ -6216,46 +6181,37 @@ readers do not read off random characters that represent icons */
   footer {
     height: 7em;
   }
-  footer .wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+  footer .wrapper, footer .footer-wrapper, footer header .header-wrapper, header footer .header-wrapper {
     flex-direction: column;
   }
-  footer .wrapper .copy {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
+  footer .wrapper .copy, footer .footer-wrapper .copy, footer header .header-wrapper .copy, header footer .header-wrapper .copy {
     order: 2;
   }
-  footer .wrapper .nav {
-    -webkit-box-ordinal-group: 1;
-    -ms-flex-order: 0;
+  footer .wrapper .nav, footer .footer-wrapper .nav, footer header .header-wrapper .nav, header footer .header-wrapper .nav {
     order: 0;
   }
-  footer .wrapper .nav nav ul {
-    -ms-flex-pack: distribute;
+  footer .wrapper .nav .footer-nav, footer .footer-wrapper .nav .footer-nav, footer header .header-wrapper .nav .footer-nav, header footer .header-wrapper .nav .footer-nav {
+    margin: 1em;
+  }
+  footer .wrapper .nav .footer-nav ul, footer .footer-wrapper .nav .footer-nav ul, footer header .header-wrapper .nav .footer-nav ul, header footer .header-wrapper .nav .footer-nav ul {
     justify-content: space-around;
   }
-  footer .wrapper .nav nav ul li a {
+  footer .wrapper .nav .footer-nav ul li a, footer .footer-wrapper .nav .footer-nav ul li a, footer header .header-wrapper .nav .footer-nav ul li a, header footer .header-wrapper .nav .footer-nav ul li a {
     padding: 0;
   }
-  footer .wrapper .social {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
+  footer .wrapper .social, footer .footer-wrapper .social, footer header .header-wrapper .social, header footer .header-wrapper .social {
     order: 1;
     width: 40%;
   }
-  footer .wrapper .social ul {
-    -ms-flex-pack: distribute;
+  footer .wrapper .social ul, footer .footer-wrapper .social ul, footer header .header-wrapper .social ul, header footer .header-wrapper .social ul {
     justify-content: space-around;
   }
   footer .copy,
-  footer .nav,
-  footer .social {
+footer .nav,
+footer .social {
     width: 100%;
   }
 }
-
 @media (max-width: 36.125em) {
   .prime-wrapper main .articles-section article {
     width: 100%;
@@ -6264,7 +6220,6 @@ readers do not read off random characters that represent icons */
     width: 100%;
   }
   .prime-wrapper aside {
-    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   .prime-wrapper aside .search {
@@ -6274,100 +6229,72 @@ readers do not read off random characters that represent icons */
     width: 100%;
   }
   .prime-wrapper aside .news-segment calendar-widget,
-  .prime-wrapper aside .news-segment .popular-news {
+.prime-wrapper aside .news-segment .popular-news {
     width: 100%;
   }
   footer {
     height: 7em;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
   footer .social {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: start;
   }
 }
-
 /* ================================== */
 /* Global Styles ==================== */
 /* ================================== */
 @font-face {
   font-family: Roboto;
-  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"),
-    url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"), url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
 }
-
 @font-face {
   font-family: "Proxima-Light";
-  src: url(/website/fonts/Proxima-Nova/ProximaNova-Light.woff) format("woff"),
-    url(/website/fonts/Proxima-Nova/ProximaNova-Light.otf) format("opentype");
+  src: url(/website/fonts/Proxima-Nova/ProximaNova-Light.woff) format("woff"), url(/website/fonts/Proxima-Nova/ProximaNova-Light.otf) format("opentype");
   font-weight: lighter;
 }
-
 @font-face {
   font-family: "Proxima-Reg";
-  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"),
-    url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
+  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"), url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
 }
-
 @font-face {
   font-family: "Font Awesome";
-  src: url(/website/fonts/fontAwesome/webfonts/fa-brands-400.woff) format("woff"),
-    url(/website/fonts/fontAwesome/webfonts/fa-brands-400.ttf) format("truetype");
+  src: url(/website/fonts/fontAwesome/webfonts/fa-brands-400.woff) format("woff"), url(/website/fonts/fontAwesome/webfonts/fa-brands-400.ttf) format("truetype");
 }
-
 @font-face {
   font-family: "Font Awesome Reg";
-  src: url(/website/fonts/fontAwesome/webfonts/fa-regular-400.woff) format("woff"),
-    url(/website/fonts/fontAwesome/webfonts/fa-regular-400.ttf) format("truetype");
+  src: url(/website/fonts/fontAwesome/webfonts/fa-regular-400.woff) format("woff"), url(/website/fonts/fontAwesome/webfonts/fa-regular-400.ttf) format("truetype");
 }
-
 @font-face {
   font-family: "Font Awesome Logos";
-  src: url(/website/fonts/fontAwesome/webfonts/fa-brands-400.woff) format("woff"),
-    url(/website/fonts/fontAwesome/webfonts/fa-brands-400.ttf) format("truetype");
+  src: url(/website/fonts/fontAwesome/webfonts/fa-brands-400.woff) format("woff"), url(/website/fonts/fontAwesome/webfonts/fa-brands-400.ttf) format("truetype");
 }
-
 body {
   font-family: Roboto;
   font-size: 16px;
 }
 
 .prime-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
-.wrapper {
+.wrapper, footer .footer-wrapper, header .header-wrapper {
   width: 85%;
   height: 100%;
   margin: 0 auto;
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 nav ul a {
   font-family: "Proxima-Reg";
-  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"),
-    url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
+  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"), url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
   color: black;
   text-transform: uppercase;
   text-decoration: none;
   padding: 0 35px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -6379,24 +6306,18 @@ header {
   height: 5em;
   background-color: #f7c61d;
 }
-header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+header .header-wrapper {
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 header .nav-toggle {
   width: 3em;
   background: none;
   border: none;
-  display: none;
+  display: block;
 }
 header .nav-toggle .toggle-line {
-  display: block;
   width: 100%;
   height: 0.25em;
   background-color: black;
@@ -6412,24 +6333,18 @@ header .nav-toggle .toggle-line:first-of-type {
 /* ================================= */
 main {
   width: 77%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 main h1 {
   font-family: "Proxima-Reg";
-  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"),
-    url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
+  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"), url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
   font-weight: bold;
   font-size: 24px;
   margin: 16px 0 15px;
 }
 main article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 50px;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 main article figure {
@@ -6442,22 +6357,14 @@ main article figure img {
 }
 main article .article-content {
   width: 65%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-left: 25px;
 }
 main article .article-content h1 {
   font-family: "Proxima-Reg";
-  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"),
-    url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
+  src: url(/website/fonts/Proxima-Nova/ProximaNova-Reg.woff) format("woff"), url(/website/fonts/Proxima-Nova/ProximaNova-Reg.otf) format("opentype");
   color: #333333;
   font-weight: lighter;
   font-size: 30px;
@@ -6468,16 +6375,14 @@ main article .article-content .subtitle {
 main article .article-content .subtitle .date,
 main article .article-content .subtitle .author {
   font-family: Roboto;
-  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"),
-    url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"), url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
   color: #999999;
   font-weight: lighter;
   font-size: 13px;
 }
 main article .article-content .subtitle .category {
   font-family: Roboto;
-  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"),
-    url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"), url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
   color: #e3b002;
   font-weight: lighter;
   font-size: 13px;
@@ -6497,29 +6402,27 @@ main article .article-content .additional {
 }
 main article .article-content .additional .veiws {
   font-family: Roboto;
-  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"),
-    url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"), url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
   color: #999999;
   font-weight: lighter;
   font-size: 13px;
 }
 main article .article-content .additional .veiws::before {
   display: inline-block;
-  content: "\1F441";
+  content: "👁";
   font-size: 18px;
   margin-right: 3px;
 }
 main article .article-content .additional .comments {
   font-family: Roboto;
-  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"),
-    url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"), url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
   color: #e3b002;
   font-weight: lighter;
   font-size: 13px;
 }
 main article .article-content .additional .comments::before {
   display: inline-block;
-  content: "\1F4AC";
+  content: "💬";
   margin-right: 3px;
 }
 main article span::after {
@@ -6538,7 +6441,7 @@ main button {
   background: transparent;
   font-size: 12px;
   -webkit-text-decoration: uppercase;
-  text-decoration: uppercase;
+          text-decoration: uppercase;
   border: 2px solid #f7c61d;
   border-radius: 5px;
   display: block;
@@ -6550,12 +6453,7 @@ main button {
 /* ================================== */
 aside {
   width: 23%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 78px 65px 0 65px;
 }
@@ -6574,15 +6472,11 @@ aside .search input {
   border: 2px solid #999999;
   outline: none;
   padding: 8px 30px 8px 30px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 aside .news-segment calendar-widget,
 aside .news-segment calendar-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -6611,7 +6505,7 @@ aside .news-segment calendar-widget table th,
 aside .news-segment calendar-top table th {
   height: 23px;
   background-color: #e7e7e7;
-  color: #7a7a7a;
+  color: rgb(122, 122, 122);
 }
 aside .news-segment calendar-widget table .other-month,
 aside .news-segment calendar-top table .other-month {
@@ -6638,12 +6532,7 @@ aside .news-segment calendar-top table #current-day {
 }
 aside .news-segment calendar-widget {
   border: 1px solid #999999;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: calc(80% + 4px);
   margin-top: 38px;
@@ -6651,32 +6540,20 @@ aside .news-segment calendar-widget {
 aside .news-segment calendar-top {
   width: 100%;
   height: 38px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 aside .news-segment .popular-news {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 38px;
 }
 aside .news-segment .popular-news h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: "Proxima-Reg";
   font-size: 22px;
   font-weight: bold;
   white-space: nowrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 aside .news-segment .popular-news h1::after {
@@ -6693,8 +6570,7 @@ aside .news-segment article {
 }
 aside .news-segment article .news-date {
   font-family: Roboto;
-  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"),
-    url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  src: url(/website/fonts/Roboto/Roboto-Regular.woff) format("woff"), url(/website/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
   color: #999999;
   font-weight: lighter;
   font-size: 13px;
@@ -6713,30 +6589,21 @@ footer {
   height: 5em;
   background-color: #f7c61d;
 }
-footer .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+footer .footer-wrapper {
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-footer .wrapper .copy {
+footer .footer-wrapper .copy {
   font-family: "Proxima-Light";
   font-size: 13px;
   color: #a78613;
 }
-footer .wrapper .social ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+footer .footer-wrapper .social ul {
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-footer .wrapper .social ul a {
+footer .footer-wrapper .social ul a {
   display: block;
   width: 40px;
   height: 40px;
@@ -6744,17 +6611,10 @@ footer .wrapper .social ul a {
   background: #fff;
   font-family: "Font Awesome";
   color: #f7c61d;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
   margin: 0 12px;

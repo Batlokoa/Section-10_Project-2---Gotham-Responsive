@@ -12,6 +12,7 @@ $social-font-src: url(/website/fonts/fontAwesome/webfonts/fa-brands-400.woff) fo
 $copy-font-name: "Proxima-Light";
 $copy-font-colour: #a78613;
 
+
 // Mixins -----------------------//
 
 @mixin nav-properties() {
@@ -21,9 +22,9 @@ $copy-font-colour: #a78613;
     background-color: $colour-primary;
 }
 
-@mixin nav-wrapper-properties() {
+@mixin nav-wrapper-properties($navJustify: space-around) {
     display: flex;
-    justify-content: space-around;
+    justify-content: $navJustify;
     align-items: center;
 }
 
@@ -31,3 +32,4 @@ $copy-font-colour: #a78613;
     display: flex;
     justify-content: space-between;
 }
+
