@@ -69,7 +69,7 @@ nav ul {
 
 header {
     @include nav-properties();
-
+    
     .header-wrapper {
         @extend .wrapper;
         @include nav-wrapper-properties();
@@ -80,6 +80,9 @@ header {
         
         .toggle-line {
             @include nav-burger-line();
+
+            //* Allows any animation applied to the toggle/burger-lines activate along with a sooth transition
+            transition: all .4s ease-in-out;
         }
     }
 }

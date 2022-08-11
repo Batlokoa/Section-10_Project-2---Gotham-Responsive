@@ -6178,6 +6178,7 @@ header .nav-toggle .toggle-line {
   background-color: black;
   border-radius: 0.25em;
   margin-bottom: 0.25em;
+  transition: all 0.4s ease-in-out;
 }
 header .nav-toggle .toggle-line:first-of-type {
   margin-top: 0.25em;
@@ -6516,6 +6517,20 @@ header .header-wrapper .header-nav-right ul {
   }
   header.open .header-nav-right {
     right: 1.5rem;
+  }
+  header.open .nav-toggle {
+    width: 3em;
+    height: 3em;
+  }
+  header.open .toggle-line#burger-line_top {
+    transform: rotate(45deg) translate(0.3em, 0.4em);
+  }
+  header.open .toggle-line#burger-line_center {
+    transform: translateX(-2.3em);
+    background: transparent;
+  }
+  header.open .toggle-line#burger-line_bottom {
+    transform: rotate(-45deg) translate(0.3em, -0.4em);
   }
   header.open::after {
     content: "";

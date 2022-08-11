@@ -52,11 +52,35 @@
                 right: $header-nav-margin;
             }
 
+            .nav-toggle{
+                width: 3em;
+                height: 3em;
+                // border: 0.2em solid $colour-header-article;
+            }
+
+            .toggle-line{
+                //* ANIMATION
+
+                &#burger-line_top{
+                    transform: rotate(45deg)  translate(0.3em, 0.4em);
+                }
+
+                &#burger-line_center{
+                    transform: translateX(-2.3em);
+                    background: transparent;
+                }
+
+                &#burger-line_bottom{
+                    transform: rotate(-45deg) translate(0.3em, -0.4em);
+                }
+            }
+
             &::after{
                 content: '';
                 @include nav-properties(8em);
                 position: absolute;
                 top: 100%;
+
             }
         }
     }
